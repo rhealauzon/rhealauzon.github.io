@@ -1,0 +1,123 @@
+html
+{
+	background: #FFFFFF;
+	font-size: 62.5%;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+a
+{
+	text-decoration: none;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Navigational Bar */
+#navbar
+{
+	width: 100%;
+	height: 60px;
+	z-index: 1;
+	background: rgba(102,204,204, 100) ;
+	border-bottom: 2px solid #FFF;
+	position: absoloute:
+	bottom: -1px;
+}
+
+#nav
+{
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#nav > div
+{
+	height: 100%;
+	margin: 10px 10px;
+	display: inline-block;
+}
+
+#nav div a 
+{
+	font-family: aria;
+	font-size: 2.75em;
+	font-weight: 2;
+	color:#FFF;
+	transition: color 0.70s;
+}
+
+#nav div a:hover
+{
+	color:#000;
+}
+
+#nav div a:active 
+{
+	color:#000;
+}
+
+#logo
+{
+	background: url("../images/rhea2015.png") no-repeat;
+	text-indent: -9999px;
+	padding-top: 0;
+}
+
+
+/** Class Content **/
+
+#content
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#section
+{
+	width: 100%;
+	height: 35%;
+	background: url("../images/mainface.png");
+	overflow: hidden;
+}
+
+
+/**  Face Transitions **/
+#artist-face
+{
+	right: 0px;
+}
+
+#programmer-face
+{
+	left: 0px;
+}
+
+
+#programmer-face, #artist-face
+{
+	width: 50%;
+	position: absolute;
+	top: 60px;
+}
+
+ #artist-img
+ {
+ 	width: 100%;
+ }
+
+ #programmer-img
+ {
+ 	width: 100%;
+ }
