@@ -33,32 +33,33 @@
 
 html 
 { 
-  background: url("../images/bg3.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
-  text-align: center;
+    background: url("../images/bg3.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: 'Poiret One';
+    font-size: 1.2vw;
 }
 
 /** HEADER AREA **/
 #home #name
 {
 	font-family: ChalkHeader;
-	font-size: 8em;
-    /**NOTE: Change to normal if its a header **/
-    font-weight: normal;
+	font-size: 7vw;
+    font-weight: normal;     /**NOTE: Changed to normal if its a header **/
     background-image: url("../images/name.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-
+    background-size: contain;
 }
 
 #home #profession
 {
-	font-family: ChalkSecondary;
-	font-size: 2em;
+	font-family: CrayonThin;
+	font-size: 3vw;
     font-weight: normal;
 }
 
@@ -84,12 +85,13 @@ a:hover, a:active { text-decoration: none; }
 
 #nav 
 {
-    font-family: Crayon;
-    font-size: 2em;
+    font-family: ChalkSecondary;
+    font-size: 1.5vw;
     padding: 60px;
-    background-image: url("../images/nav-border.png");
+    /* background-image: url("../images/nav-border.png");
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-size: contain;
+    background-position: 50% 50%; */
     
 }
 
@@ -99,27 +101,91 @@ a:hover, a:active { text-decoration: none; }
 #nav-contact { color: #8600e4; }
 
 
-/** ABOUT SECTION **/
+/** CONTENT SECTIONS **/
+.sectionArea
+{
+    margin-bottom: 150px;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 0px;
+}
+
 .sectionTitle
 {
      font-family: CrayonThin;
-     font-size: 6em;
+     font-size: 5vw;
      margin-top: 40px;
+     margin-bottom: 20px; /** space between the title and the section below **/
 }
-.sectionArea
+
+#aboutTitle
 {
-    margin-bottom: 140px;
+    background: url("../images/about-border.png") right top no-repeat;
+    background-position: 50% 50%;
+    padding-top: 20px;
+    background-size: contain;
 }
 
 /** SKILLS SECTION **/
-#skills
+#skillsTitle
 {
-    background-image: url("../images/skills-border.png");
-    background-repeat: no-repeat;
+    background: url("../images/skills-border.png") right top no-repeat;
     background-position: 50% 50%;
+    padding-top: 20px;
+    background-size: contain;
+}
+
+/** PROJECTS SECTION **/
+#projectsTitle
+{
+    background: url("../images/projects-border.png") right top no-repeat;
+    background-position: 50% 50%;
+    padding-top: 20px;
+    background-size: contain;
 }
 
 
-/** PROJECTS SECTION **/
-
 /** CONTACTS SECTION **/
+#contactTitle
+{
+    background: url("../images/contact-border.png") right top no-repeat;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 20px;
+    background-size: contain;
+}
+
+#linkedin
+{
+	background: url("../images/linkedin-chalk.png") right top no-repeat;
+	background-size: 64px 64px;
+}
+
+#github
+{
+	background: url("../images/github-chalk.png") right top no-repeat;
+	background-size: 64px 64px;
+}
+
+#contactLinks li a span { display: none; } /* Hide text */
+#contactLinks 
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* remove default list style */
+}
+
+#contactlinks li 
+{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#contactlinks li a
+{
+    float: left;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+}
