@@ -3,14 +3,22 @@ $(document).ready(function()
   
   $(window).scroll(function () 
   {
-        if ($(window).scrollTop() > 246) 
-        {
-            $('#navbar').addClass('navbar-fixed');
-        }
-        if ($(window).scrollTop() < 245) 
-        {
-            $('#navbar').removeClass('navbar-fixed');
-        }
+		if ($(window).scrollTop() > $(window).height() - 64)
+		{
+			if ($("#navbar").hasClass("navbar-locked"))
+			{
+				$("#navbar").addClass("navbar-unlocked");
+				$("#navbar").removeClass("navbar-locked");
+			}
+		}
+		else
+		{
+			if (!$("#navbar").hasClass("navbar-locked"))
+			{
+				$("#navbar").addClass("navbar-locked");
+				$("#navbar").removeClass("navbar-unlocked");
+			}
+		}
     });
 
     $('a[href^="#"]').on('click', function (element) 

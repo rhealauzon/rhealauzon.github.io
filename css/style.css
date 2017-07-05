@@ -31,6 +31,8 @@
 }
 
 
+html,body{ margin:0; padding:0; height:100%; width:100%; }
+
 html 
 { 
     background: url("../images/bg3.jpg") no-repeat center center fixed; 
@@ -38,17 +40,29 @@ html
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body
+{
+	min-width: 800px;
+    font-family: 'Poiret One';
     color: white;
     text-align: center;
-    font-family: 'Poiret One';
     font-size: 1.2vw;
 }
 
 /** HEADER AREA **/
+#opening
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 #home #name
 {
+    margin-top: 250px;
 	font-family: ChalkHeader;
-	font-size: 7vw;
+	font-size: 8em;
     font-weight: normal;     /**NOTE: Changed to normal if its a header **/
     background-image: url("../images/name.png");
     background-repeat: no-repeat;
@@ -59,7 +73,7 @@ html
 #home #profession
 {
 	font-family: CrayonThin;
-	font-size: 3vw;
+	font-size: 5em;
     font-weight: normal;
 }
 
@@ -68,43 +82,70 @@ a
 {
      text-decoration: none; 
      color:white;
-     padding: 30px;
+     padding: 5%;
 }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:focus { text-decoration: none; }
-a:hover, a:active { text-decoration: none; }
 
-.navbar-fixed 
+
+.navbar-locked
 {
+	position: absolute;
+	bottom: -1px;
+    background: rgba(15, 15, 15, 0.55);
+}
+
+.navbar-unlocked
+{
+	position: fixed;
     top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
+    background: #1A1A1A;
+}
+
+#navbar
+{
+	width:100%;
+	height: 60px;
+	z-index: 1;
+	border-bottom: 1px dashed #FFF;
+    box-shadow: 0px 0px 125px 15px #0f0f0f;
 }
 
 #nav 
 {
+    min-width: 700px;
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
     font-family: ChalkSecondary;
     font-size: 1.5vw;
-    padding: 60px;
-    /* background-image: url("../images/nav-border.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%; */
-    
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+#nav > div
+{
+	height: 100%;
+    margin: 15px 20px;
+	display: inline-block;
 }
 
-#nav-about { color: #00a1bf; }
-#nav-skills { color: #70ff00; }
-#nav-projects { color: #bf002a; }
-#nav-contact { color: #8600e4; }
+#nav a
+{
+    transition: color 0.2s;
+}
+
+#nav-about:hover { color: #00a1bf; }
+#nav-skills:hover { color: #70ff00; }
+#nav-projects:hover { color: #bf002a; }
+#nav-contact:hover { color: #8600e4; }
 
 
 /** CONTENT SECTIONS **/
 .sectionArea
 {
     margin-bottom: 150px;
+}
+
+.sectionArea div
+{
     padding-right: 20%;
     padding-left: 20%;
     padding-top: 0px;
@@ -114,16 +155,14 @@ a:hover, a:active { text-decoration: none; }
 {
      font-family: CrayonThin;
      font-size: 5vw;
-     margin-top: 40px;
-     margin-bottom: 20px; /** space between the title and the section below **/
 }
 
 #aboutTitle
 {
     background: url("../images/about-border.png") right top no-repeat;
     background-position: 50% 50%;
-    padding-top: 20px;
-    background-size: contain;
+    background-size: 50%;
+    padding-top: 2%;
 }
 
 /** SKILLS SECTION **/
@@ -131,8 +170,8 @@ a:hover, a:active { text-decoration: none; }
 {
     background: url("../images/skills-border.png") right top no-repeat;
     background-position: 50% 50%;
-    padding-top: 20px;
-    background-size: contain;
+    padding-top: 2%;
+    background-size: 50%;
 }
 
 /** PROJECTS SECTION **/
@@ -140,8 +179,8 @@ a:hover, a:active { text-decoration: none; }
 {
     background: url("../images/projects-border.png") right top no-repeat;
     background-position: 50% 50%;
-    padding-top: 20px;
-    background-size: contain;
+    padding-top: 2%;
+    background-size: 50%;
 }
 
 
@@ -151,41 +190,73 @@ a:hover, a:active { text-decoration: none; }
     background: url("../images/contact-border.png") right top no-repeat;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    padding-top: 20px;
-    background-size: contain;
+    padding-top: 2%;
+    background-size: 50%;
 }
 
-#linkedin
-{
-	background: url("../images/linkedin-chalk.png") right top no-repeat;
-	background-size: 64px 64px;
-}
 
-#github
+#links
 {
-	background: url("../images/github-chalk.png") right top no-repeat;
-	background-size: 64px 64px;
+    margin-top: 30px;
 }
 
 #contactLinks li a span { display: none; } /* Hide text */
 #contactLinks 
 {
-    margin: 0;
+    margin: 0 auto;
+    width: 300px;
     padding: 0;
     list-style-type: none; /* remove default list style */
 }
 
-#contactlinks li 
+#contactLinks li 
 {
-    margin: 0;
-    padding: 0;
     float: left;
 }
 
-#contactlinks li a
+#contactLinks li a
 {
-    float: left;
     height: 150px;
+    width: 150px;
+    float: left;
     padding: 0;
     margin: 0;
+    background-color: inherit;
+}
+
+#contactLinks  li a:hover
+{
+    background-color: #8600e4;
+    transition: color 0.5s;
+}
+
+#linkedin
+{
+	background: url("../images/linkedin-icon.png") no-repeat;
+}
+
+#github
+{
+	background: url("../images/github-icon.png") no-repeat;
+}
+
+
+/* FOOTER SECTION **/
+.footer
+{
+	float: left;
+	display: block;
+	margin-top: 100px;
+	width: 100%;
+	background: #1A1A1A;
+	border-top: 1px dashed #FFF;
+	box-shadow: 0px 0px 100px 25px #1A1A1A;
+}
+
+.footer p
+{
+	text-align: center;
+	font-size: 1em;
+	color: #888;
+
 }
