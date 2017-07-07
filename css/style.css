@@ -35,7 +35,7 @@ html,body{ margin:0; padding:0; height:100%; width:100%; }
 
 html 
 { 
-    background: url("../images/bg3.jpg") no-repeat center center fixed; 
+    background: #000 url("../images/bg3.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -48,8 +48,9 @@ body
     font-family: 'Poiret One';
     color: white;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1.2em;
 }
+
 
 /** HEADER AREA **/
 #opening
@@ -58,6 +59,7 @@ body
     height: 100%;
     overflow: hidden;
 }
+
 #home #name
 {
     margin-top: 250px;
@@ -78,11 +80,12 @@ body
 }
 
 /** NAVIGATION BAR **/
-a
+#nav a
 {
      text-decoration: none; 
      color:white;
-     padding: 5%;
+     padding-left: 2%;
+     padding-right: 2%;
 }
 
 
@@ -90,14 +93,14 @@ a
 {
 	position: absolute;
 	bottom: -1px;
-    background: rgba(15, 15, 15, 0.55);
+    background: rgba(15, 15, 15, 0.65);
 }
 
 .navbar-unlocked
 {
 	position: fixed;
     top: 0;
-    background: #1A1A1A;
+    background: #171717;
 }
 
 #navbar
@@ -105,8 +108,27 @@ a
 	width:100%;
 	height: 60px;
 	z-index: 1;
-	border-bottom: 1px dashed #FFF;
+    border-image: url("../images/chalk-border.png");
+    border-image-width: 0 0 100px 0;
+    border-image-repeat: repeat;
     box-shadow: 0px 0px 125px 15px #0f0f0f;
+}
+
+#navbar:after 
+{  
+content: "";
+    border-bottom: 16px solid transparent;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    -webkit-border-image: url("../images/chalk-border.png"); /* Safari 3.1-5 */
+    -o-border-image: url("../images/chalk-border.png"); /* Opera 11-12.1 */
+    border-image: url("../images/chalk-border.png") ;
+    border-image-slice: 20;
+    border-image-width: 100px;
+    border-image-outset: 0;
+    border-image-repeat: repeat;
 }
 
 #nav 
@@ -116,15 +138,9 @@ a
 	text-align: center;
 	margin: 0 auto;
     font-family: ChalkSecondary;
-    font-size: 1.5vw;
+    font-size: 1.2em;
     text-transform: uppercase;
-    padding-top: 20px;
-}
-#nav > div
-{
-	height: 100%;
-    margin: 15px 20px;
-	display: inline-block;
+    padding-top: 10px;
 }
 
 #nav a
@@ -132,23 +148,34 @@ a
     transition: color 0.2s;
 }
 
+#nav-home:hover { color: #f5f51e; }
 #nav-about:hover { color: #00a1bf; }
 #nav-skills:hover { color: #70ff00; }
 #nav-projects:hover { color: #bf002a; }
 #nav-contact:hover { color: #8600e4; }
 
-
+.content
+{
+    margin-top: 50px;
+}
 /** CONTENT SECTIONS **/
 .sectionArea
 {
-    margin-bottom: 150px;
+    margin-top: 100px;
 }
 
 .sectionArea div
 {
     padding-right: 20%;
     padding-left: 20%;
-    padding-top: 0px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.sectionArea p, ul
+{
+    padding: 0;
+    margin: 0;
 }
 
 .sectionTitle
@@ -157,41 +184,69 @@ a
      font-size: 5vw;
 }
 
+.subHeader
+{
+    font-family: CrayonThin;
+    font-size: 2em;
+}
+
+#skills .subHeader
+{
+    color: #70ff00;
+}
+
+/** ABOUT SECTION **/
 #aboutTitle
 {
-    background: url("../images/about-border.png") right top no-repeat;
-    background-position: 50% 50%;
-    background-size: 50%;
+    background: url("../images/about-border.png") center center no-repeat;
+    background-size: 50%;    
     padding-top: 2%;
+}
+
+#resumeLink
+{
+    width:  200px;
+    height: 300px;
 }
 
 /** SKILLS SECTION **/
 #skillsTitle
 {
-    background: url("../images/skills-border.png") right top no-repeat;
-    background-position: 50% 50%;
+    background: url("../images/skills-border.png") center center no-repeat;
+    background-size: 50%;    
     padding-top: 2%;
-    background-size: 50%;
 }
 
+.lang-icon
+{
+    margin-right: 2%;
+    width: 125px;
+    height: 125px;
+}
+
+#otherSkills
+{
+    text-align: left;
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
 /** PROJECTS SECTION **/
 #projectsTitle
 {
-    background: url("../images/projects-border.png") right top no-repeat;
-    background-position: 50% 50%;
+    background: url("../images/projects-border.png") center center no-repeat;
+    background-size: 50%;    
     padding-top: 2%;
-    background-size: 50%;
 }
 
 
 /** CONTACTS SECTION **/
 #contactTitle
 {
-    background: url("../images/contact-border.png") right top no-repeat;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background: url("../images/contact-border.png") center center no-repeat;
+    background-size: 50%;    
     padding-top: 2%;
-    background-size: 50%;
 }
 
 
@@ -201,10 +256,12 @@ a
 }
 
 #contactLinks li a span { display: none; } /* Hide text */
+#resumeLink span { display: none; }
+
 #contactLinks 
 {
     margin: 0 auto;
-    width: 300px;
+    width: 450px;
     padding: 0;
     list-style-type: none; /* remove default list style */
 }
@@ -224,11 +281,6 @@ a
     background-color: inherit;
 }
 
-#contactLinks  li a:hover
-{
-    background-color: #8600e4;
-    transition: color 0.5s;
-}
 
 #linkedin
 {
@@ -240,6 +292,47 @@ a
 	background: url("../images/github-icon.png") no-repeat;
 }
 
+#email
+{
+	background: url("../images/email-icon.png") no-repeat;
+}
+
+#linkedin:hover
+{
+    background: url("../images/linkedin-icon_h.png") no-repeat;
+}
+
+
+#github:hover
+{
+	background: url("../images/github-icon_h.png") no-repeat;
+}
+
+#email:hover
+{
+    background: url("../images/email-icon_h.png") no-repeat;
+}
+/* Hovering for buttons, taken from hover.css */
+.hvr-grow
+{
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active 
+{
+    transform: scale(1.1);
+}
+
+
 
 /* FOOTER SECTION **/
 .footer
@@ -249,7 +342,7 @@ a
 	margin-top: 100px;
 	width: 100%;
 	background: #1A1A1A;
-	border-top: 1px dashed #FFF;
+    border-top: 1px dashed #ffffff;
 	box-shadow: 0px 0px 100px 25px #1A1A1A;
 }
 

@@ -21,6 +21,7 @@ $(document).ready(function()
 		}
     });
 
+	//Navigational links
     $('a[href^="#"]').on('click', function (element) 
 	{
 		// Stop the standard jump-to-div

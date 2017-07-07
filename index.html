@@ -13,10 +13,16 @@
 		<!-- Styling -->
 		<link href="css/style.css" rel = "stylesheet" type = "text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">
 
 		<!-- Javascript -->
  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 		<script src="js/home.js"></script>
+
+		 <script src="js/wow-min.js"></script>
+		<script>
+			new WOW().init();
+		</script>
 	
 	</head>
 
@@ -25,8 +31,8 @@
 		<!-- Content -->
 		<div id="opening">
 			<div id="home">
-				<div id="name">Rhea Lauzon</div>
-				<div id="profession">SOFTWARE DEVELOPER</div>
+				<div class="wow bounceInDown"  id="name">Rhea Lauzon</div>
+				<div class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="350ms" id="profession">SOFTWARE DEVELOPER</div>
 			</div>
 
 			<div class="navbar-locked" id="navbar">
@@ -42,31 +48,45 @@
 
 		<div class="content">
 			<div class="sectionArea" id="about">
-				<div class="sectionTitle" id="aboutTitle">About Me</div>
-				<div>This is some content about me. I'm cool I guess. Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats
-					Cats cats cats Cats cats catsCats cats cats Cats cats cats Cats cats cats Cats cats cats
-					Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats cats
-					Cats cats cats Cats cats catsCats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats cats
-					Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats cats
-					Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats cats
-					Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats cats cats Cats cats catsCats cats cats Cats cats cats</div>
+				<div class="sectionTitle wow slideInLeft" id="aboutTitle">About Me</div>
+				<div class="wow slideInLeft" data-wow-delay="300ms">
+					This is some content about me. I'm cool I guess. Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats
+				</div>
+				<a class="hvr-grow wow fadeIn" data-wow-delay="700ms" id="resumeLink" href="files/Rhea Lauzon - Resume.pdf"><img src="images/resume-icon.png"></a>
 			</div>
 
-			<div class="sectionArea" id="skills">
+			<div class="sectionArea wow slideInLeft" id="skills">
 				<div class="sectionTitle" id="skillsTitle">Skills</div>
+				<p  class="subHeader"> Primary Skills: </p>
+				<img class="lang-icon wow fadeIn" data-wow-delay="600ms" src="images/language-icons/c++.png" alt="C++">				
+				<img class="lang-icon wow fadeIn" data-wow-delay="1s" src="images/language-icons/csharp.png" alt="C#">
+				<img class="lang-icon wow fadeIn" data-wow-delay="1400ms" src="images/language-icons/networking.png" alt="Networking">
+				<img class="lang-icon wow fadeIn" data-wow-delay="1800ms" src="images/language-icons/java.png" alt="Java">
+				<img class="lang-icon wow fadeIn" data-wow-delay="2200ms" src="images/language-icons/android.png" alt="Android">
+				<p class="subHeader">Other Skills: </p>
+				<ul id="otherSkills">
+					<li>Online Games & Network Security</li>
+					<li>Javascript</li>
+					<li>Webmarkup Languages (ie: HTML, CSS)</li>
+					<li>Game Development</li>
+					<li>SQL</li>
+					<li>Procedural and Object-Oriented design</li>
+					<li>Git Workflow</li>
+				</ul>
 			</div>
 
-			<div class="sectionArea" id="projects">
+			<div class="sectionArea wow slideInLeft" id="projects">
 				<div class="sectionTitle" id="projectsTitle">Projects</div>
 			</div>
 		
-			<div class="sectionArea" id="contact">
+			<div class="sectionArea wow slideInLeft" id="contact">
 				<div class="sectionTitle" id="contactTitle">Contact</div>
 				<div>Connect with me or check out my work!</div>
 				<div id="links">
 					<ul id="contactLinks">
-						<li><a id="linkedin" href="https://www.linkedin.com/in/rhealauzon/"><span>My LinkedIn</span></a></li>
-						<li><a id="github" href="https://github.com/rhealauzon"><span>My Github</span></a></li>
+						<li class="hvr-grow wow fadeIn"><a id="linkedin" href="https://www.linkedin.com/in/rhealauzon/"><span>My LinkedIn</span></a></li>
+						<li class="hvr-grow wow fadeIn" data-wow-delay="400ms"><a id="github" href="https://github.com/rhealauzon"><span>My Github</span></a></li>
+						<li class="hvr-grow wow fadeIn" data-wow-delay="800ms"><a id="email" href="https://github.com/rhealauzon"><span>Email Me</span></a></li>
 					</ul>
 				</div>
 			</div>
