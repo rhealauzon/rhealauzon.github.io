@@ -1,6 +1,9 @@
 $(document).ready(function() 
 {
   
+   $("#demo01").animatedModal();
+
+
   $(window).scroll(function () 
   {
 		if ($(window).scrollTop() > $(window).height() - 64)

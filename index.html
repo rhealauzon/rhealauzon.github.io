@@ -11,15 +11,15 @@
 		<!-- <link href="/favicon.ico" rel="favourite icon"></link> -->
 
 		<!-- Styling -->
-		<link href="css/style.css" rel = "stylesheet" type = "text/css" />
+			<link rel="stylesheet" href="css/animate.css">
+		<link href="css/style.css" rel = "stylesheet" type = "text/css" />		
 		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-		<link rel="stylesheet" href="css/animate.css">
 
 		<!-- Javascript -->
  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 		<script src="js/home.js"></script>
-
-		 <script src="js/wow-min.js"></script>
+		<script src="js/wow-min.js"></script>
+		 <script src="js/animatedModal.min.js"></script>
 		<script>
 			new WOW().init();
 		</script>
@@ -77,6 +77,18 @@
 
 			<div class="sectionArea wow slideInLeft" id="projects">
 				<div class="sectionTitle" id="projectsTitle">Projects</div>
+				
+				<a id="demo01" href="#animatedModal">DEMO01</a>
+				<div id="animatedModal">
+						<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+						<div class="close-animatedModal"> 
+							CLOSE MODAL
+						</div>
+							
+						<div class="modal-content">
+								<!--Your modal content goes here-->
+						</div>
+				</div>
 			</div>
 		
 			<div class="sectionArea wow slideInLeft" id="contact">
