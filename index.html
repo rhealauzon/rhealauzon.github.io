@@ -11,15 +11,16 @@
 		<!-- <link href="/favicon.ico" rel="favourite icon"></link> -->
 
 		<!-- Styling -->
-			<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/animate.css">
 		<link href="css/style.css" rel = "stylesheet" type = "text/css" />		
 		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
 		<!-- Javascript -->
- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
-		<script src="js/home.js"></script>
-		<script src="js/wow-min.js"></script>
-		 <script src="js/animatedModal.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="scripts/home.js"></script>
+		<script src="scripts/wow-min.js"></script>
 		<script>
 			new WOW().init();
 		</script>
@@ -48,14 +49,14 @@
 
 		<div class="content">
 			<div class="sectionArea" id="about">
-				<div class="sectionTitle wow slideInLeft" id="aboutTitle">About Me</div>
+				<div class="sectionTitle wow bounceInDown" id="aboutTitle">About Me</div>
 				<div class="wow slideInLeft" data-wow-delay="300ms">
 					This is some content about me. I'm cool I guess. Cats cats cats Cats cats cats Cats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats cats Cats cats catsCats cats
 				</div>
 				<a class="hvr-grow wow fadeIn" data-wow-delay="700ms" id="resumeLink" href="files/Rhea Lauzon - Resume.pdf"><img src="images/resume-icon.png"></a>
 			</div>
 
-			<div class="sectionArea wow slideInLeft" id="skills">
+			<div class="sectionArea wow bounceInDown" id="skills">
 				<div class="sectionTitle" id="skillsTitle">Skills</div>
 				<p  class="subHeader"> Primary Skills: </p>
 				<img class="lang-icon wow fadeIn" data-wow-delay="600ms" src="images/language-icons/c++.png" alt="C++">				
@@ -75,23 +76,15 @@
 				</ul>
 			</div>
 
-			<div class="sectionArea wow slideInLeft" id="projects">
+			<div class="sectionArea wow bounceInDown" id="projects">
 				<div class="sectionTitle" id="projectsTitle">Projects</div>
 				
-				<a id="demo01" href="#animatedModal">DEMO01</a>
-				<div id="animatedModal">
-						<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-						<div class="close-animatedModal"> 
-							CLOSE MODAL
-						</div>
-							
-						<div class="modal-content">
-								<!--Your modal content goes here-->
-						</div>
-				</div>
+				<!-- Trigger the modal with a button -->
+				<button type="button" class="btn btn-info btn-lg projBtn" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
 			</div>
 		
-			<div class="sectionArea wow slideInLeft" id="contact">
+			<div class="sectionArea wow bounceInDown" id="contact">
 				<div class="sectionTitle" id="contactTitle">Contact</div>
 				<div>Connect with me or check out my work!</div>
 				<div id="links">
@@ -104,12 +97,25 @@
 			</div>
 		</div>
 
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+						<p id="projectTitle">Project Title</h4>
+					<div id="projContent"></div>
+				</div>					
+			</div>
+		</div>
+
 		<div class="footer">
 			<div class="inner">
 				<p>★ Website designed & created by Rhea Lauzon ★</p>
 			</div>
 		</div>
-
 	</body>
 
 

@@ -1,8 +1,5 @@
 $(document).ready(function() 
 {
-  
-   $("#demo01").animatedModal();
-
 
   $(window).scroll(function () 
   {
@@ -43,5 +40,11 @@ $(document).ready(function()
 	    	// Update the address bar
 	        window.location.hash = target;
     	});
+	});
+
+	$(".projBtn").click(function()
+	{
+		console.log("Button pressed");
+		$("#projContent").load("../projects/cardCatacombs.html");
 	});
 });
