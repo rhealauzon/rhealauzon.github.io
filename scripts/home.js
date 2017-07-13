@@ -1,8 +1,7 @@
 $(document).ready(function() 
 {
-
-  $(window).scroll(function () 
-  {
+	$(window).scroll(function () 
+	{
 		if ($(window).scrollTop() > $(window).height() - 64)
 		{
 			if ($("#navbar").hasClass("navbar-locked"))
@@ -19,32 +18,32 @@ $(document).ready(function()
 				$("#navbar").removeClass("navbar-unlocked");
 			}
 		}
-    });
+	});
 
 	//Navigational links
-    $('a[href^="#"]').on('click', function (element) 
+	$('a[href^="#"]').on('click', function (element) 
 	{
 		// Stop the standard jump-to-div
-	    element.preventDefault();
+		element.preventDefault();
 
-	    // Retrive the target element
-	    var target = this.hash;
-	    var $target = $(target);
+		// Retrive the target element
+		var target = this.hash;
+		var $target = $(target);
 
-	    // Slide to the target
-	    $('html, body').stop().animate(
-	    {
-	        'scrollTop': $target.offset().top - 120
-	    }, 1000, 'swing', function() 
-	    {
-	    	// Update the address bar
-	        window.location.hash = target;
-    	});
+		// Slide to the target
+		$('html, body').stop().animate(
+		{
+			'scrollTop': $target.offset().top - 120
+		}, 1000, 'swing', function() 
+		{
+			// Update the address bar
+			window.location.hash = target;
+		});
 	});
 
 	$(".projBtn").click(function()
 	{
-		console.log("Button pressed");
-		$("#projContent").load("../projects/cardCatacombs.html");
+		$("#projContent").load("../projects/" + $(this).attr('id') + ".html");
 	});
 });
+
