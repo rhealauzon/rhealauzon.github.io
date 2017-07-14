@@ -248,6 +248,44 @@ body
     padding-top: 2%;
 }
 
+.project-btn 
+{   
+    height: 250px;
+    width: 250px;
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#cardCatacombs
+{
+    background: url("../images/cardCatacombs-icon.png") no-repeat;
+    background-size: contain;
+}
+
+#parity
+{
+    background: url("../images/parity-icon.png") no-repeat;
+    background-size: contain;
+}
+
+#dogYarnIt
+{
+    background: url("../images/dogYarnIt-icon.png") no-repeat;
+    background-size: contain;
+}
+
+#commAudio
+{
+    background: url("../images/commAudio-icon.png") no-repeat;
+    background-size: contain;
+}
+
+#cardCatacombs
+{
+    background: url("../images/cardCatacombs-icon.png") no-repeat;
+    background-size: contain;
+}
 
 /** CONTACTS SECTION **/
 #contactTitle
@@ -277,6 +315,7 @@ body
 #contactLinks li 
 {
     float: left;
+    margin-left: 5%;
 }
 
 #contactLinks li a
@@ -311,18 +350,22 @@ body
 #linkedin:hover
 {
     background: url("../images/linkedin-icon_h.png") no-repeat;
+    background-size: contain;
 }
 
 
 #github:hover
 {
-	background: url("../images/github-icon_h.png") no-repeat;
+    background: url("../images/github-icon_h.png") no-repeat;
+    background-size: contain;
 }
 
 #email:hover
 {
     background: url("../images/email-icon_h.png") no-repeat;
+    background-size: contain;
 }
+
 /* Hovering for buttons, taken from hover.css */
 .hvr-grow
 {

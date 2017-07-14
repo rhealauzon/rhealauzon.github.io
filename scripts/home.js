@@ -41,7 +41,8 @@ $(document).ready(function()
 		});
 	});
 
-	$(".projBtn").click(function()
+	//if any project buttons are clicked, we insert content in the modal before its displayed
+	$(".project-btn").click(function()
 	{
 		$("#projContent").load("../projects/" + $(this).attr('id') + ".html");
 	});
