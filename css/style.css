@@ -58,6 +58,13 @@ body
     background: none;
 }
 
+img
+{
+    -webkit-backface-visibility: hidden; 
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
 
 /** HEADER AREA **/
 #opening
@@ -211,10 +218,10 @@ body
     padding-top: 2%;
 }
 
-#resumeLink
+#resumeLink img
 {
-    width:  200px;
-    height: 300px;    
+    max-width:  150px;
+    
 }
 
 /** SKILLS SECTION **/
