@@ -20,6 +20,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="scripts/home.js"></script>
+		<script src="scripts/email.js"></script>
 		<script src="scripts/wow-min.js"></script>
 		<script>
 			new WOW().init();
@@ -42,7 +43,6 @@
 					<a id="nav-about" href="#about">About</a>
 					<a id="nav-skills" href="#skills">Skills</a>
 					<a id="nav-projects" href="#projects">Projects</a>
-					<a id="nav-contact" href="#contact">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -50,15 +50,23 @@
 		<div class="content">
 			<div class="sectionArea" id="about">
 				<div class="sectionTitle wow bounceInDown" id="aboutTitle">About Me</div>
-				<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<div class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="0.4s">
 					I am an experienced and creative software developer always looking for opportunities to explore and expand my knowledge in a variety of fields.
 					Although my primary domain of interest is backend server programming, I also dabble in game development, rendering, web development, and more!
 
-					<br><br>I have a Bachelor of Technology in Computer Systems specializing in Network Security Administration, as well as a diploma in Computer Systesm Technology specializing in Data Communication.
-				
-					<br><br>For more information about me, check out my resume down below!
+					<br><br>I have a Bachelor of Technology in Computer Systems specializing in Network Security Administration, as well as a diploma in Computer Systems Technology specializing in Data Communication.
 				</div>
+
+				<div class="wow fadeInLeft">Check out my resume below, connect with me, or check out my work!</div>
 				<a class="hvr-grow wow fadeIn" data-wow-delay="700ms" id="resumeLink" href="files/Rhea Lauzon - Resume.pdf"><img src="images/resume-icon.png"></a>
+
+				<div id="links">
+					<ul id="contactLinks">
+						<li class="hvr-grow wow fadeIn" data-wow-delay="400ms"><a id="linkedin" href="https://www.linkedin.com/in/rhealauzon/"  target="_blank"><span>My LinkedIn</span></a></li>
+						<li class="hvr-grow wow fadeIn" data-wow-delay="800ms"><a id="github" href="https://github.com/rhealauzon"  target="_blank"><span>My Github</span></a></li>
+						<li class="hvr-grow wow fadeIn" data-wow-delay="1200ms"><script>mail2("rhealauzon", "gmail", 0, "")</script><span>Email Me</span></a></li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="sectionArea" id="skills">
@@ -70,13 +78,13 @@
 				<img class="lang-icon wow fadeIn" data-wow-delay="1800ms" src="images/language-icons/java.png" alt="Java"/>
 				<img class="lang-icon wow fadeIn" data-wow-delay="2200ms" src="images/language-icons/android.png" alt="Android"/>
 				<p class="subHeader wow fadeInLeft">Other Skills: </p>
-				<ul id="otherSkills wow fadeIn">
+				<ul id="otherSkills" class="wow fadeIn">
 					<li>Online Games & Network Security</li>
 					<li>Game Development</li>
 					<li>Javascript</li>
 					<li>Webmarkup Languages (ie: HTML, CSS)</li>
 					<li>SQL</li>
-					<li>Procedural and Object-Oriented design</li>
+					<li>Procedural and Object-Oriented Design</li>
 					<li>Git Workflow</li>
 				</ul>
 			</div>
@@ -86,25 +94,15 @@
 				
 				<!-- Trigger the modal with a button -->
 				<button type="button" id="cardCatacombs" class="project-btn hvr-grow wow fadeIn" data-toggle="modal" data-target="#myModal"></button>
-				<button type="button" id="parity" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="400ms" data-toggle="modal" data-target="#myModal"></button>
-				<button type="button" id="dogYarnIt" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="800ms" data-toggle="modal" data-target="#myModal"></button>
-				<button type="button" id="commAudio" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="1200ms" data-toggle="modal" data-target="#myModal"></button>
+				<button type="button" id="commAudio" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="400ms" data-toggle="modal" data-target="#myModal"></button>
+				<button type="button" id="parity" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="800ms" data-toggle="modal" data-target="#myModal"></button>
+				<button type="button" id="hometownOdyssey" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="1200ms" data-toggle="modal" data-target="#myModal"></button>
+				<button type="button" id="dogYarnIt" class="project-btn hvr-grow  wow fadeIn" data-wow-delay="1600ms" data-toggle="modal" data-target="#myModal"></button>
+			
 
-			</div>
-		
-			<div class="sectionArea" id="contact">
-				<div class="sectionTitle  wow bounceInDown" id="contactTitle">Contact</div>
-				<div class="wow fadeInLeft">Connect with me or check out my work!</div>
-				<div id="links">
-					<ul id="contactLinks">
-						<li class="hvr-grow wow fadeIn" data-wow-delay="400ms"><a id="linkedin" href="https://www.linkedin.com/in/rhealauzon/"><span>My LinkedIn</span></a></li>
-						<li class="hvr-grow wow fadeIn" data-wow-delay="800ms"><a id="github" href="https://github.com/rhealauzon"><span>My Github</span></a></li>
-						<li class="hvr-grow wow fadeIn" data-wow-delay="1200ms"><a id="email" href="https://github.com/rhealauzon"><span>Email Me</span></a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
-
+		
 		<div class="footer">
 			<div class="inner">
 				<p>★ Website designed & created by Rhea Lauzon ★</p>
