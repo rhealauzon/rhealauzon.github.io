@@ -37,6 +37,7 @@ html,body
      padding: 0; 
      height: 100%; 
      width: 100%; 
+     min-width: 800px;
 }
 
 html 
@@ -50,7 +51,6 @@ html
 
 body
 {
-	min-width: 800px;
     font-family: 'Roboto';
     color: white;
     text-align: center;
@@ -82,8 +82,8 @@ img
 	font-size: 10em;
     font-weight: normal;     /**NOTE: Changed to normal if its a header **/
     background-image: url("../images/name.png");
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     background-size: contain;
 }
 
@@ -195,7 +195,7 @@ img
 .sectionTitle
 {
      font-family: CrayonThin;
-     font-size: 5vw;
+     font-size: 5em;
 }
 
 .subHeader
@@ -212,9 +212,13 @@ img
 /** ABOUT SECTION **/
 #aboutTitle
 {
-    background: url("../images/about-border.png") center center no-repeat;
-    background-size: 50%;    
+    background: url("../images/about-border.png") center center no-repeat;   
     padding-top: 2%;
+}
+
+#about p
+{
+    margin: 20px 0;
 }
 
 #resumeLink img
@@ -226,8 +230,7 @@ img
 /** SKILLS SECTION **/
 #skillsTitle
 {
-    background: url("../images/skills-border.png") center center no-repeat;
-    background-size: 50%;    
+    background: url("../images/skills-border.png") center center no-repeat;   
     padding-top: 2%;
 }
 
@@ -250,8 +253,7 @@ img
 /** PROJECTS SECTION **/
 #projectsTitle
 {
-    background: url("../images/projects-border.png") center center no-repeat;
-    background-size: 50%;    
+    background: url("../images/projects-border.png") center center no-repeat; 
     padding-top: 2%;
 }
 
