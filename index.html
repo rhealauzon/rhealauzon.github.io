@@ -23,7 +23,13 @@
 		<script src="scripts/email.js"></script>
 		<script src="scripts/wow-min.js"></script>
 		<script>
-			new WOW().init();
+ 			wow = new WOW(
+			{			
+				//change the offset so that animations trigger more closely to when they are visible on screen	
+				offset:  100
+			}
+			)
+			wow.init();
 		</script>
 	
 	</head>
@@ -81,7 +87,7 @@
 					<img class="lang-icon wow fadeIn" data-wow-delay="2200ms" src="images/language-icons/android.png" alt="Android"/>
 				</div>
 				<p class="subHeader wow fadeInLeft">Other Skills: </p>
-				<ul id="otherSkills" class="wow fadeIn">
+				<ul id="otherSkills" class="wow fadeInLeft">
 					<li>Online Games & Network Security</li>
 					<li>Game Development</li>
 					<li>Javascript</li>
