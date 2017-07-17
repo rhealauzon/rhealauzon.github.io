@@ -74,12 +74,19 @@ img
     overflow: hidden;
 }
 
+#home
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+}
+
 #home #name
 {
     margin-top: 250px;
     padding: 1%;
 	font-family: ChalkHeader;
-	font-size: 10em;
+	font-size: 11vw;
     font-weight: normal;     /**NOTE: Changed to normal if its a header **/
     background-image: url("../images/name.png");
     background-position: center;
@@ -163,10 +170,10 @@ img
     transition: color 0.2s;
 }
 
-#nav-home:hover { color: #f5f51e; }
-#nav-about:hover { color: #00a1bf; }
-#nav-skills:hover { color: #70ff00; }
-#nav-projects:hover { color: #bf002a; }
+#nav a:hover
+{
+    color: #00a1bf;
+}
 
 .content
 {
@@ -196,6 +203,8 @@ img
 {
      font-family: CrayonThin;
      font-size: 5em;
+     background: url("../images/about-border.png") center center no-repeat;   
+     padding-top: 2%;
 }
 
 .subHeader
@@ -206,16 +215,11 @@ img
 
 #skills .subHeader
 {
-    color: #70ff00;
+    color: #00a1bf;;
+    font-weight: bold;
 }
 
 /** ABOUT SECTION **/
-#aboutTitle
-{
-    background: url("../images/about-border.png") center center no-repeat;   
-    padding-top: 2%;
-}
-
 #about p
 {
     margin: 20px 0;
@@ -228,12 +232,6 @@ img
 }
 
 /** SKILLS SECTION **/
-#skillsTitle
-{
-    background: url("../images/skills-border.png") center center no-repeat;   
-    padding-top: 2%;
-}
-
 .lang-icon
 {
     margin-left: 2%;
@@ -251,12 +249,6 @@ img
     *display:inline;
 }
 /** PROJECTS SECTION **/
-#projectsTitle
-{
-    background: url("../images/projects-border.png") center center no-repeat; 
-    padding-top: 2%;
-}
-
 .project-btn 
 {   
     height: 250px;
@@ -311,8 +303,6 @@ img
 
 #contactLinks li a span { display: none; } /* Hide text */
 #resumeLink span { display: none; }
-
-
 
 #contactLinks 
 {
@@ -389,22 +379,23 @@ img
 
 .projectContent a
 {
-    color: white;
+    font-family: chalkHeader;
+    color: #00a1bf;
     text-decoration: underline;
+    font-size: 2em;
     
 }
 
 .projectContent a:hover
 {    
-    color: #9f9f9f;
+    color: #136f81;
 }
 
 #projLink
 {
     margin-top: 30px;
+
 }
-
-
 /* MODAL PROPERTIES */
 .modal-header
 {
